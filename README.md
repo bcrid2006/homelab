@@ -1,61 +1,52 @@
-# homelab
-Personal cybersecurity home lab — Ubuntu server, VMs, SIEM, and detection engineering
-# 🏠 Home Lab
+# Home Lab — bjhomeserver
 
-Personal cybersecurity lab built on an always-on Ubuntu Linux server.  
-Goal: develop hands-on skills in system administration, detection engineering, and SOC operations to support a career transition into IT/cybersecurity.
+Hands-on IT lab on an always-on Ubuntu server, built to practice the work of a help desk / IT support technician: Windows administration, Active Directory, ticket handling, and documentation. Security monitoring comes later as I move toward SOC work.
 
----
-
-## 🖥️ Current Infrastructure
+## Infrastructure
 
 | Component | Details |
 |-----------|---------|
-| **Host OS** | Ubuntu Server 22.04 LTS |
-| **Hardware** | Always-on home server (bjhomeserver) |
-| **Purpose** | Lab host, future SIEM platform, VM hypervisor |
+| Host OS | Ubuntu Server 24.04 LTS (headless, managed over SSH) |
+| Hardware | 16 GB RAM, 1 TB NVMe |
+| Hypervisor | KVM/QEMU, managed through Cockpit |
+| Other services | Game servers managed with AMP |
 
----
+## Lab Roadmap
 
-## 🗺️ Lab Roadmap
-
-### Phase 1 — Foundation (In Progress)
+### Phase 1 — Hypervisor setup (in progress)
 - [x] Ubuntu server running 24/7
-- [ ] Install KVM/VirtualBox for VM hosting
-- [ ] Deploy Windows Server 2022 eval VM
-- [ ] Configure Active Directory domain controller
-- [ ] Join a Windows 11 client VM to the domain
+- [x] Audit and clean up unused services and scheduled jobs → [write-up](docs/01-server-audit-cleanup.md)
+- [ ] Install KVM + Cockpit for VM management
+- [ ] Download Windows Server 2025 and Windows 11 Enterprise evaluation ISOs
 
-### Phase 2 — Detection Engineering (Planned)
-- [ ] Deploy Wazuh SIEM manager
-- [ ] Install Wazuh agents on all VMs
-- [ ] Configure Sysmon on Windows endpoints
-- [ ] Ingest Windows Security Event Log + Sysmon logs
-- [ ] Write custom detection rules
+### Phase 2 — Fake company domain
+- [ ] Windows Server 2025 VM promoted to domain controller (AD DS, DNS)
+- [ ] Windows 11 client VM joined to the domain
+- [ ] OUs, users, and security groups for a small fake company
+- [ ] Group Policy: password policy, mapped drives, desktop restrictions
 
-### Phase 3 — Adversary Emulation (Planned)
-- [ ] Deploy Atomic Red Team
-- [ ] Run MITRE ATT&CK techniques against lab
-- [ ] Document detection coverage gaps
-- [ ] Write incident reports for each exercise
+### Phase 3 — Help desk practice
+- [ ] osTicket installed and configured
+- [ ] Daily simulated tickets (lockouts, password resets, drive mapping, printers)
+- [ ] Resolution write-ups for each ticket type
 
----
+### Phase 4 — Security monitoring (later)
+- [ ] Sysmon on Windows endpoints
+- [ ] Wazuh SIEM collecting Windows logs
+- [ ] Investigate simulated attacks and write incident reports
 
-## 📂 Projects
+## Write-ups
 
-*Nothing here yet — first project coming soon.*
+| # | Topic | Skills |
+|---|-------|--------|
+| 01 | [Server audit and cleanup](docs/01-server-audit-cleanup.md) | Linux, cron, systemd, credential hygiene |
 
----
+## Skills Used So Far
+`Ubuntu Linux` `SSH` `Bash` `cron` `systemd` `AMP game server management`
 
-## 🎯 Goals
+## Planned
+`KVM` `Windows Server 2025` `Active Directory` `Group Policy` `osTicket` `PowerShell` `Sysmon` `Wazuh`
 
-- CompTIA A+ (in progress)
-- CompTIA Security+ (planned)
-- Land first Help Desk / IT Support role in Houston metro
-- Pivot to SOC Analyst Tier 1 within 18 months
-
----
-
-## 🛠️ Tools & Technologies
-
-`Ubuntu Linux` `KVM` `Windows Server 2022` `Active Directory` `Wazuh` `Sysmon` `Splunk` `Wireshark` `MITRE ATT&CK` `Atomic Red Team` `Bash` `PowerShell`
+## Certifications
+- CompTIA A+ — in progress
+- CompTIA Security+ — planned
