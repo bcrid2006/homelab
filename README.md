@@ -16,8 +16,8 @@ Hands-on IT lab on an always-on Ubuntu server, built to practice the work of a h
 ### Phase 1 — Hypervisor setup (in progress)
 - [x] Ubuntu server running 24/7
 - [x] Audit and clean up unused services and scheduled jobs → [write-up](docs/01-server-audit-cleanup.md)
-- [ ] Install KVM + Cockpit for VM management
-- [ ] Download Windows Server 2025 and Windows 11 Enterprise evaluation ISOs
+- [x] Install KVM + Cockpit for VM management
+- [x] Download Windows Server 2025 and Windows 11 Enterprise evaluation ISOs
 
 ### Phase 2 — Fake company domain
 - [ ] Windows Server 2025 VM promoted to domain controller (AD DS, DNS)
