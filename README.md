@@ -13,17 +13,17 @@ Hands-on IT lab on an always-on Ubuntu server, built to practice the work of a h
 
 ## Lab Roadmap
 
-### Phase 1 — Hypervisor setup
+### Phase 1 — Hypervisor setup (complete)
 - [x] Ubuntu server running 24/7
 - [x] Audit and clean up unused services and scheduled jobs → [write-up](docs/01-server-audit-cleanup.md)
 - [x] Install KVM + Cockpit for VM management
 - [x] Download Windows Server 2025 and Windows 11 Enterprise evaluation ISOs
 
-### Phase 2 — Fake company domain (in progress)
+### Phase 2 — Fake company domain (complete)
 - [x] Windows Server 2025 VM promoted to domain controller (AD DS, DNS)
 - [x] Windows 11 client VM joined to the domain
 - [x] OUs, users, and security groups for a small fake company
-- [ ] Group Policy: password policy, mapped drives, desktop restrictions
+- [x] Group Policy: password policy, mapped drives, desktop restrictions
 
 ### Phase 3 — Help desk practice
 - [ ] osTicket installed and configured
@@ -43,12 +43,13 @@ Hands-on IT lab on an always-on Ubuntu server, built to practice the work of a h
 | 02 | [Building the domain controller](docs/02-domain-controller.md) | KVM, Windows Server 2025, AD DS, DNS, static IP |
 | 03 | [Joining a Windows 11 client to the domain](docs/03-client-domain-join.md) | Windows 11, UEFI/TPM, DNS, domain join |
 | 04 | [Users, OUs, and groups](docs/04-users-ous-groups.md) | ADUC, OUs, security groups, password resets, admin account separation |
+| 05 | [Group Policy and troubleshooting a mapped drive](docs/05-group-policy.md) | GPO, SMB shares, DNS, gpresult, account lockout |
 
 ## Skills Used So Far
-`Ubuntu Linux` `SSH` `Bash` `cron` `systemd` `KVM` `Windows Server 2025` `Windows 11` `Active Directory` `DNS` `AMP game server management`
+`Ubuntu Linux` `SSH` `Bash` `cron` `systemd` `KVM` `Windows Server 2025` `Windows 11` `Active Directory` `Group Policy` `DNS` `PowerShell` `SMB file shares` `AMP game server management`
 
 ## Planned
-`Group Policy` `osTicket` `PowerShell` `Sysmon` `Wazuh`
+`osTicket` `Sysmon` `Wazuh`
 
 ## Certifications
 - CompTIA A+ — in progress
