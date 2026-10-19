@@ -23,9 +23,10 @@ Remove everything from those projects without breaking the OS or the game server
 - Server is ready to host VMs for the Active Directory lab
 
 ## Still to do
-- [ ] Revoke old credentials at the source (API keys, Discord webhooks, app passwords)
-- [ ] Remove Webmin, an unused admin panel that adds attack surface; Cockpit replaces it
+- [x] Revoke old credentials at the source (API keys, Discord webhooks, app passwords)
+- [x] Remove Webmin, an unused admin panel that adds attack surface; Cockpit replaces it
 
 ## What I learned
 - Always inventory before deleting. Scheduled jobs can live in several places: cron, systemd timers, and services.
 - Deleting a script doesn't deactivate the credentials it used. They have to be revoked where they were issued.
+- Fewer admin panels means less attack surface. I kept one management tool (Cockpit) instead of two.
