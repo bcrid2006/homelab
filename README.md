@@ -21,7 +21,7 @@ Hands-on IT lab on an always-on Ubuntu server, built to practice the work of a h
 
 ### Phase 2 — Fake company domain (in progress)
 - [x] Windows Server 2025 VM promoted to domain controller (AD DS, DNS)
-- [ ] Windows 11 client VM joined to the domain
+- [x] Windows 11 client VM joined to the domain
 - [ ] OUs, users, and security groups for a small fake company
 - [ ] Group Policy: password policy, mapped drives, desktop restrictions
 
@@ -41,9 +41,10 @@ Hands-on IT lab on an always-on Ubuntu server, built to practice the work of a h
 |---|-------|--------|
 | 01 | [Server audit and cleanup](docs/01-server-audit-cleanup.md) | Linux, cron, systemd, credential hygiene |
 | 02 | [Building the domain controller](docs/02-domain-controller.md) | KVM, Windows Server 2025, AD DS, DNS, static IP |
+| 03 | [Joining a Windows 11 client to the domain](docs/03-client-domain-join.md) | Windows 11, UEFI/TPM, DNS, domain join |
 
 ## Skills Used So Far
-`Ubuntu Linux` `SSH` `Bash` `cron` `systemd` `KVM` `Windows Server 2025` `Active Directory` `DNS` `AMP game server management`
+`Ubuntu Linux` `SSH` `Bash` `cron` `systemd` `KVM` `Windows Server 2025` `Windows 11` `Active Directory` `DNS` `AMP game server management`
 
 ## Planned
 `Group Policy` `osTicket` `PowerShell` `Sysmon` `Wazuh`
