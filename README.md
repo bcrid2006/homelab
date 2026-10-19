@@ -13,14 +13,14 @@ Hands-on IT lab on an always-on Ubuntu server, built to practice the work of a h
 
 ## Lab Roadmap
 
-### Phase 1 — Hypervisor setup (in progress)
+### Phase 1 — Hypervisor setup
 - [x] Ubuntu server running 24/7
 - [x] Audit and clean up unused services and scheduled jobs → [write-up](docs/01-server-audit-cleanup.md)
 - [x] Install KVM + Cockpit for VM management
 - [x] Download Windows Server 2025 and Windows 11 Enterprise evaluation ISOs
 
-### Phase 2 — Fake company domain
-- [ ] Windows Server 2025 VM promoted to domain controller (AD DS, DNS)
+### Phase 2 — Fake company domain (in progress)
+- [x] Windows Server 2025 VM promoted to domain controller (AD DS, DNS)
 - [ ] Windows 11 client VM joined to the domain
 - [ ] OUs, users, and security groups for a small fake company
 - [ ] Group Policy: password policy, mapped drives, desktop restrictions
@@ -40,12 +40,13 @@ Hands-on IT lab on an always-on Ubuntu server, built to practice the work of a h
 | # | Topic | Skills |
 |---|-------|--------|
 | 01 | [Server audit and cleanup](docs/01-server-audit-cleanup.md) | Linux, cron, systemd, credential hygiene |
+| 02 | [Building the domain controller](docs/02-domain-controller.md) | KVM, Windows Server 2025, AD DS, DNS, static IP |
 
 ## Skills Used So Far
-`Ubuntu Linux` `SSH` `Bash` `cron` `systemd` `AMP game server management`
+`Ubuntu Linux` `SSH` `Bash` `cron` `systemd` `KVM` `Windows Server 2025` `Active Directory` `DNS` `AMP game server management`
 
 ## Planned
-`KVM` `Windows Server 2025` `Active Directory` `Group Policy` `osTicket` `PowerShell` `Sysmon` `Wazuh`
+`Group Policy` `osTicket` `PowerShell` `Sysmon` `Wazuh`
 
 ## Certifications
 - CompTIA A+ — in progress
