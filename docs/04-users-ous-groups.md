@@ -27,3 +27,16 @@ Build an organized structure of departments, users, and security groups in Activ
 ## Decisions I made
 - **Naming convention:** first initial + last name. It's short and common in real environments. Name collisions would get a number appended (e.g. `dlopez2`).
 - **Admin naming:** `bcrid-adm`, so the account's admin rights are obvious anywhere it appears,
+
+## Result
+- 7 users in 3 departments, 3 security groups, and an organized OU structure
+- All accounts tested with a real login
+- First help desk ticket (password reset) handled start to finish
+
+## What I learned
+- OUs are for organizing and applying policy. Groups are for granting permissions.
+- "Must change password at next logon" means help desk never knows a user's real password.
+- Keeping admin and regular accounts separate limits the damage if an everyday account is compromised.
+
+## Next
+Group Policy: password policy, account lockout, mapped drives, and desktop restrictions.
