@@ -60,9 +60,10 @@ The VMs run on a private NAT network (192.168.122.0/24), kept separate from my h
 | 05 | [Group Policy and troubleshooting a mapped drive](docs/05-group-policy.md) | GPO, SMB shares, DNS, gpresult, account lockout |
 | 06 | [osTicket install and first ticket](docs/06-first-ticket.md) | osTicket, Apache, MariaDB, ticket workflow, user provisioning |
 | 07 | [Ticket generator and help desk practice](docs/07-ticket-generator.md) | PowerShell scripting, REST API, Task Scheduler, AD troubleshooting |
+| 08 | [Domain controller clock 6 hours off](docs/08-dc-time-sync.md) | NTP/w32tm, routing, layered troubleshooting |
 
 ## Skills Used So Far
-`Ubuntu Linux` `SSH` `Bash` `cron` `systemd` `KVM` `Windows Server 2025` `Windows 11` `Active Directory` `Group Policy` `DNS` `PowerShell` `SMB file shares` `Apache` `MariaDB` `osTicket` `AMP game server management` `REST API` `Task Scheduler`
+`Ubuntu Linux` `SSH` `Bash` `cron` `systemd` `KVM` `Windows Server 2025` `Windows 11` `Active Directory` `Group Policy` `DNS` `PowerShell` `SMB file shares` `Apache` `MariaDB` `osTicket` `AMP game server management` `REST API` `Task Scheduler` `NTP`
 
 ## Planned
 `Sysmon` `Wazuh`
