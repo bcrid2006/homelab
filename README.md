@@ -38,9 +38,11 @@ The VMs run on a private NAT network (192.168.122.0/24), kept separate from my h
 ### Phase 3 — Help desk practice (in progress)
 - [x] osTicket installed (v1.18.4 on Ubuntu, Apache + MariaDB + PHP)
 - [x] First ticket worked end to end: new hire account → [write-up](docs/06-first-ticket.md)
-- [ ] osTicket configured (departments, help topics, agents)
-- [ ] Simulated tickets (lockouts, password resets, drive mapping, printers)
-- [ ] Resolution write-ups for each ticket type
+- [x] Ticket generator + lab reset scripts (11 scenarios, two-issue tickets) → [write-up](docs/07-ticket-generator.md)
+- [x] Simulated tickets worked: disabled, expired, locked, password flag, group, wrong OU
+- [ ] osTicket configured (departments, help topics, priorities)
+- [ ] New scenarios practiced: logon hours, workstation, share permission, GPO link, trust relationship
+- [ ] Printer and HR share scenarios
 
 ### Phase 4 — Security monitoring (later)
 - [ ] Sysmon on Windows endpoints
@@ -57,9 +59,10 @@ The VMs run on a private NAT network (192.168.122.0/24), kept separate from my h
 | 04 | [Users, OUs, and groups](docs/04-users-ous-groups.md) | ADUC, OUs, security groups, password resets, admin account separation |
 | 05 | [Group Policy and troubleshooting a mapped drive](docs/05-group-policy.md) | GPO, SMB shares, DNS, gpresult, account lockout |
 | 06 | [osTicket install and first ticket](docs/06-first-ticket.md) | osTicket, Apache, MariaDB, ticket workflow, user provisioning |
+| 07 | [Ticket generator and help desk practice](docs/07-ticket-generator.md) | PowerShell scripting, REST API, Task Scheduler, AD troubleshooting |
 
 ## Skills Used So Far
-`Ubuntu Linux` `SSH` `Bash` `cron` `systemd` `KVM` `Windows Server 2025` `Windows 11` `Active Directory` `Group Policy` `DNS` `PowerShell` `SMB file shares` `Apache` `MariaDB` `osTicket` `AMP game server management`
+`Ubuntu Linux` `SSH` `Bash` `cron` `systemd` `KVM` `Windows Server 2025` `Windows 11` `Active Directory` `Group Policy` `DNS` `PowerShell` `SMB file shares` `Apache` `MariaDB` `osTicket` `AMP game server management` `REST API` `Task Scheduler`
 
 ## Planned
 `Sysmon` `Wazuh`
