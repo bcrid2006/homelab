@@ -27,7 +27,7 @@ This turned out to be four separate problems. I worked through them one layer at
 | Share | `Get-SmbShare` on DC01 | The parent folder `C:\Shares` was shared as `Shares`, not `Sales` | Removed it, recreated the share on the right folder with `New-SmbShare`, verified with `Get-SmbShareAccess` |
 | Name resolution | `net use` (error 67), `net view` (error 53), `nslookup`, `Resolve-DnsName` | The server was named `DCO1` (letter O) instead of `DC01` (zero), so `DC01` never existed in DNS | Renamed the server with `Rename-Computer`, re-registered DNS (`ipconfig /registerdns`, restarted Netlogon) |
 
-While checking `ipconfig /all`, I also found the default gateway was typed as `182.168.122.1` instead of `192.168.122.1`, and fixed it.
+While checking ipconfig /all, I also found the default gateway was typed as 182.168.122.1 instead of 192.168.122.1. I believed I had fixed it, but the fix never took effect. Three weeks later DC01 couldn’t sync its clock, and Get-NetIPConfiguration showed the wrong gateway was still there (see write-up 08). Lesson: verify a change actually applied, not just that the command ran.
 
 After the fixes, Dana's S: drive mapped automatically at login, and `net use` showed `\\DC01\Sales` with status OK.
 
