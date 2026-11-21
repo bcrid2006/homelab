@@ -75,7 +75,7 @@ The VMs run on a private NAT network (192.168.122.0/24), kept separate from my h
 
 | Active Directory OU structure | Group Policy applied to a Sales user |
 |---|---|
-| ![ADUC OU tree](images/aduc-ou-tree.png) | ![gpresult](images/gpresult-sales-user-2.png) || ![gpresult](images/gpresult-sales-user-1.png) |
+| ![ADUC OU tree](images/aduc-ou-tree.png) | ![gpresult](images/gpresult-sales-user-2.png) | ![gpresult](images/gpresult-sales-user-1.png) |
 
 | A finished help desk ticket |
 |---|
