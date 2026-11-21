@@ -2,6 +2,8 @@
 
 Hands-on IT lab on an always-on Ubuntu server, built to practice the work of a help desk / IT support technician: Windows administration, Active Directory, ticket handling, and documentation. Security monitoring comes later as I move toward SOC work.
 
+**Start here:** [08 — Troubleshooting a DC clock 6 hours off](docs/08-dc-time-sync.md) · [07 — Ticket generator + help desk practice](docs/07-ticket-generator.md) · [05 — Group Policy](docs/05-group-policy.md)
+
 ## Infrastructure
 
 | Component | Details |
@@ -40,8 +42,8 @@ The VMs run on a private NAT network (192.168.122.0/24), kept separate from my h
 - [x] First ticket worked end to end: new hire account → [write-up](docs/06-first-ticket.md)
 - [x] Ticket generator + lab reset scripts (11 scenarios, two-issue tickets) → [write-up](docs/07-ticket-generator.md)
 - [x] Simulated tickets worked: disabled, expired, locked, password flag, group, wrong OU
-- [ ] osTicket configured (departments, help topics, priorities)
-- [ ] New scenarios practiced: logon hours, workstation, share permission, GPO link, trust relationship
+- [x] osTicket configured (departments, help topics, SLAs, organizations) → [write-up](docs/09-osticket-config-and-v2-tickets.md)
+- [ ] New scenarios practiced: ✅ logon hours, ✅ workstation, ✅ share permission, ✅ GPO link, ⬜ trust relationship
 - [ ] Printer and HR share scenarios
 
 ### Phase 4 — Security monitoring (later)
@@ -61,12 +63,23 @@ The VMs run on a private NAT network (192.168.122.0/24), kept separate from my h
 | 06 | [osTicket install and first ticket](docs/06-first-ticket.md) | osTicket, Apache, MariaDB, ticket workflow, user provisioning |
 | 07 | [Ticket generator and help desk practice](docs/07-ticket-generator.md) | PowerShell scripting, REST API, Task Scheduler, AD troubleshooting |
 | 08 | [Domain controller clock 6 hours off](docs/08-dc-time-sync.md) | NTP/w32tm, routing, layered troubleshooting |
+| 09 | [osTicket configuration + new ticket types](docs/09-osticket-config-and-v2-tickets.md) | osTicket admin, SLAs, triage, share/NTFS permissions, GPO links |
 
 ## Skills Used So Far
 `Ubuntu Linux` `SSH` `Bash` `cron` `systemd` `KVM` `Windows Server 2025` `Windows 11` `Active Directory` `Group Policy` `DNS` `PowerShell` `SMB file shares` `Apache` `MariaDB` `osTicket` `AMP game server management` `REST API` `Task Scheduler` `NTP`
 
 ## Planned
 `Sysmon` `Wazuh`
+
+## Screenshots
+
+| Active Directory OU structure | Group Policy applied to a Sales user |
+|---|---|
+| ![ADUC OU tree](images/aduc-ou-tree.png) | ![gpresult](images/gpresult-sales-user-2.png) |
+
+| A finished help desk ticket |
+|---|
+| ![osTicket ticket](images/osticket-ticket.png) |
 
 ## Certifications
 - CompTIA A+ — in progress
